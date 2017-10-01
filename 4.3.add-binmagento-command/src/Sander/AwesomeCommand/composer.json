@@ -1,0 +1,21 @@
+{
+    "name": "sander/module-awesomecommand",
+    "description": "simple extra command",
+    "license": "Apache License 2.0",
+    "authors": [
+        {
+            "name": "Sander Mangel",
+            "email": "sander@sandermangel.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sander\\AwesomeCommand\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
