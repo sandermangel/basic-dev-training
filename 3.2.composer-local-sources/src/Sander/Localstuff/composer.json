@@ -1,0 +1,12 @@
+{
+    "name": "sander/localstuff",
+    "license": "MIT",
+    "type": "magento-module",
+    "description": "some faancy code",
+    "authors":[
+        {
+            "name":"Sander Mangel",
+            "email":"sander@sandermangel.nl"
+        }
+    ]
+}

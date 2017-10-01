@@ -1,0 +1,15 @@
+{
+    "name": "sander/basic-dev-training",
+    "description": "A test composer project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sander Mangel",
+            "email": "sander@sandermangel.nl"
+        }
+    ],
+    "require": {
+        "moneyphp/money": "^3.0"
+    }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sander_Module>
+            <version>1.0.0</version>
+        </Sander_Module>
+    </modules>
+</config>

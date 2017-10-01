@@ -1,0 +1,25 @@
+{
+    "name": "sander/basic-dev-training",
+    "description": "A test composer project",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+      { "type": "path", "url": "./src/*/*" }
+    ],
+    "authors": [
+        {
+            "name": "Sander Mangel",
+            "email": "sander@sandermangel.nl"
+        }
+    ],
+    "require": {
+        "moneyphp/money": "^3.0",
+        "sander/localstuff": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sander\\Module\\": "app/Sander/Module"
+        },
+        "psr-0": { "": "lib/" }
+    }
+}

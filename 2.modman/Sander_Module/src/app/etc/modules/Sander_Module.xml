@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sander_Module>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Sander_Module>
+    </modules>
+</config>
