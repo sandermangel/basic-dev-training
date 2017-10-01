@@ -1,4 +1,4 @@
-## Composer various local sources
+## Composer in Magento 1
 
 author: **Sander Mangel <sander@sandermangel.nl>**
 
