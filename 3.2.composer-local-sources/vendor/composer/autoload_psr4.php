@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Sander\\Module\\' => array($baseDir . '/app/Sander/Module'),
+    'Sander\\Localstuff\\' => array($vendorDir . '/sander/localstuff/src'),
     'Money\\' => array($vendorDir . '/moneyphp/money/src'),
 );

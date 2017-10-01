@@ -10,6 +10,7 @@ class ComposerStaticInit11e2fe498f239dc8d3a91e11d6c29707
         'S' => 
         array (
             'Sander\\Module\\' => 14,
+            'Sander\\Localstuff\\' => 18,
         ),
         'M' => 
         array (
@@ -21,6 +22,10 @@ class ComposerStaticInit11e2fe498f239dc8d3a91e11d6c29707
         'Sander\\Module\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/Sander/Module',
+        ),
+        'Sander\\Localstuff\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sander/localstuff/src',
         ),
         'Money\\' => 
         array (

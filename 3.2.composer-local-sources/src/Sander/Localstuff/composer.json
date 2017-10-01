@@ -8,5 +8,10 @@
             "name":"Sander Mangel",
             "email":"sander@sandermangel.nl"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sander\\Localstuff\\": "src/"
+        }
+    }
 }

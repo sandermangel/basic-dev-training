@@ -90,10 +90,15 @@
             "dist": {
                 "type": "path",
                 "url": "./src/Sander/Localstuff",
-                "reference": "dc2ed9e680648b048aa4f9d2063126d03e968ff4",
+                "reference": "a2373b80f9f40d5af21cd0f10aa96e12b77df597",
                 "shasum": null
             },
             "type": "magento-module",
+            "autoload": {
+                "psr-4": {
+                    "Sander\\Localstuff\\": "src/"
+                }
+            },
             "license": [
                 "MIT"
             ],
