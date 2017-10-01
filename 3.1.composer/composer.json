@@ -2,7 +2,7 @@
     "name": "sander/basic-dev-training",
     "description": "A test composer project",
     "type": "project",
-    "license": "MIT",
+    "license": "Apache License 2.0",
     "authors": [
         {
             "name": "Sander Mangel",
