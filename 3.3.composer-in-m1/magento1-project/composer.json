@@ -1,0 +1,26 @@
+{
+  "name": "sander/magento-project",
+  "description": "Magento 1 shop",
+  "type": "magento-project",
+  "license": "Apache License 2.0",
+  "authors": [
+    {
+      "name": "Sander Mangel",
+      "email": "sander@sandermangel.nl"
+    }
+  ],
+  "repositories": [
+    { "type": "composer", "url": "https://packages.firegento.com" }
+  },
+  "require": {
+    "magento-hackathon/magento-composer-installer": "^3.1"
+  },
+  "extra":{
+    "magento-root-dir": "./",
+    "magento-deploystrategy": "copy",
+    "magento-force": "override"
+  },
+  "autoload": {
+    "psr-0": {"": "src"}
+  }
+}
