@@ -1,19 +1,34 @@
 <?php
 
-namespace Tests\Functional;
+namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Sander\Module\Service\Tax;
 
-use Sander\Module\Service\ProductPrice;
-
-class ProductPriceTest extends TestCase
+class TaxTest extends TestCase
 {
-    public function testFinalPricesPerCountry()
+    public function testTaxRatePerCountry()
     {
-        $productPriceService = new ProductPrice();
+        $tax = new Tax();
 
-        $this->assertEquals(14.52, $productPriceService->retailPrice(10, 'nl'));
-        $this->assertEquals(14.28, $productPriceService->retailPrice(10, 'de'));
-        $this->assertEquals(14.76, $productPriceService->retailPrice(10, 'be'));
+        $this->assertEquals(21, $tax->rateByCountry('nl'));
+        $this->assertEquals(19, $tax->rateByCountry('de'));
+        $this->assertEquals(23, $tax->rateByCountry('be'));
+    }
+
+    public function testZeroTaxOnUndefined()
+    {
+        $tax = new Tax();
+
+        $this->assertEquals(0, $tax->rateByCountry('unkown'));
+    }
+
+    public function testTaxAmountPerCountry()
+    {
+        $tax = new Tax();
+
+        $this->assertEquals(2.1, $tax->taxAmount(10,'nl'));
+        $this->assertEquals(1.9, $tax->taxAmount(10,'de'));
+        $this->assertEquals(2.3, $tax->taxAmount(10,'be'));
     }
 }

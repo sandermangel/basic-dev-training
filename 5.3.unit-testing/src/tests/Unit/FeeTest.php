@@ -1,35 +1,23 @@
 <?php
 
-namespace Tests\Functional;
+namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Sander\Module\Service\Fee;
 
-use Sander\Module\Service\Tax;
-
-class TaxTest extends TestCase
+class FeeTest extends TestCase
 {
-    public function testTaxRatePerCountry()
+    public function testCalculatedFee()
     {
-        $tax = new Tax();
+        $fee = new Fee();
 
-        $this->assertEquals(21, $tax->rateByCountry('nl'));
-        $this->assertEquals(19, $tax->rateByCountry('de'));
-        $this->assertEquals(23, $tax->rateByCountry('be'));
+        $this->assertEquals(2, $fee->calculatedAmount(10));
     }
 
-    public function testZeroTaxOnUndefined()
+    public function testZeroPriceFee()
     {
-        $tax = new Tax();
+        $fee = new Fee();
 
-        $this->assertEquals(0, $tax->rateByCountry('unkown'));
-    }
-
-    public function testTaxAmountPerCountry()
-    {
-        $tax = new Tax();
-
-        $this->assertEquals(2.1, $tax->taxAmount(10,'nl'));
-        $this->assertEquals(1.9, $tax->taxAmount(10,'de'));
-        $this->assertEquals(2.3, $tax->taxAmount(10,'be'));
+        $this->assertEquals(1.5, $fee->calculatedAmount(0));
     }
 }
