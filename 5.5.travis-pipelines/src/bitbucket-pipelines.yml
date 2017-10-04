@@ -1,0 +1,23 @@
+image: comicrelief/php7-slim
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - composer
+        script:
+          - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader
+
+          - set -e
+
+          - vendor/bin/phpcs --warning-severity=0 --standard=specstandards.xml ./.modman/
+          - vendor/bin/phpcs --warning-severity=0 --standard=specstandards.xml ./src/
+
+          - vendor/bin/phpmd ./.modman/ text phpmdstandards.xml --suffixes php,phtml
+          - vendor/bin/phpmd ./src/ text phpmdstandards.xml --suffixes php
+          - vendor/bin/phpmd ./app/design/frontend/{your template}/ text phpmdstandards.xml --suffixes php,phtml
+
+          - vendor/bin/xmllint -e 'etc/' ./.modman/
+          - vendor/bin/xmllint ./app/design/frontend/{your template}/layout
+
+          - vendor/bin/phpunit --configuration phpunit.xml
